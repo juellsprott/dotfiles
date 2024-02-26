@@ -11,6 +11,7 @@ This repository contains configuration files for the following packages
 - ZSH
 - oh-my-zsh
 - Visual Studio Code
+- Edge
 - Hyprland
 - Hyprpaper
 - Waybar
@@ -22,7 +23,7 @@ This repository contains configuration files for the following packages
 - Thunar
 - Any program using GTK configurations (chromium-based browsers, file managers)
 
-For oh-my-zsh, move the files to the correct directory, usually /home/$USER/.oh-my-zsh. For Albert, it is adviced to manually build Albert Launcher in order to include all Python plugins rather than adding them yourself. In albert-theme are two files. `Walbert.qss` and `window-switcher-plus`. Move the former to /usr/share/albert/widgetsboxmodel/themes/ and the latter to /usr/share/albert/python/plugins/.
+For oh-my-zsh, move the files to the correct directory, usually /home/$USER/.oh-my-zsh. For Albert, it is adviced to manually build Albert Launcher in order to include all Python plugins rather than adding them yourself. In albert-theme are two files. `Walbert.qss` and `window-switcher-plus`. Move the former to /usr/share/albert/widgetsboxmodel/themes/ and the latter to /usr/share/albert/python/plugins/. In Edge, set the theme to GTK-theme.
 
 ## Dependencies
 In addition to the above packages, this repository also depends on the following packages for complete functionality and theming:
@@ -69,4 +70,6 @@ For icons, I use the Numix and [Numix Circle](https://github.com/numixproject/nu
 - [ ] Add shell script for installing packages and applying this repo's config files
   - [ ] Learn bash in order to create such a script
 - [ ] Analyse power usage of waybar/hyprland modules/configurations to optimize laptop usage
+- [ ] Fix GTK's 'prefer dark' not properly applying to all programs utilizing GTK themes (Edge)
+- [ ] Fix cursor randomly not properly updating its own state (only occurs with XWayland programs)
 - [ ] Add credits for all provided shell scripts and waybar configuration
