@@ -22,6 +22,8 @@ This repository contains configuration files for the following packages
 - Thunar
 - Any program using GTK configurations (chromium-based browsers, file managers)
 
+For oh-my-zsh, move the files to the correct directory, usually /home/$USER/.oh-my-zsh. For Albert, it is adviced to manually build Albert Launcher in order to include all Python plugins rather than adding them yourself. In albert-theme are two files. `Walbert.qss` and `window-switcher-plus`. Move the former to /usr/share/albert/widgetsboxmodel/themes/ and the latter to /usr/share/albert/python/plugins/.
+
 ## Dependencies
 In addition to the above packages, this repository also depends on the following packages for complete functionality and theming:
 - oh-my-zsh plugins
