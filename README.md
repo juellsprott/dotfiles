@@ -37,7 +37,8 @@ In addition to the above packages, this repository also depends on the following
 - [polkit](https://wiki.archlinux.org/title/Polkit) for authentication agent (needed for VSCode, Edge and 1Password)
 - [brightnessctl](https://github.com/Hummer12007/brightnessctl) For controlling brightness
 - [wireplumber](https://archlinux.org/packages/?name=wireplumber) and [pipewire](https://archlinux.org/packages/?name=pipewire) for sound control
-- 
+- wlogout for shutdown options UI
+- [bluez](https://archlinux.org/packages/?name=bluez), [bluez-utils](https://archlinux.org/packages/?name=bluez-utils) and [blueman](https://github.com/blueman-project/blueman) for managing bluetooth devices
 
 Additionally, PyWal is also installed and initialized at startup, however is not utilized in this rice. For information on how to use PyWal, refer to [this](https://github.com/rchrdwllm/dotfiles/tree/master) and this [this](https://github.com/dylanaraps/pywal). (And [this](https://github.com/ErkHal/walbert) for Albert launcher) 
 
