@@ -1,0 +1,6 @@
+timeout 300 'hyprctl dispatch dpms off'
+timeout 310 'swaylock --daemonize'
+timeout 315 'systemctl suspend'
+
+before-sleep 'swaylock --daemonize'
+after-resume 'hyprctl dispatch dpms on'dbus-update-activation-environment --all

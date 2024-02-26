@@ -1,0 +1,206 @@
+// -*- mode: jsonc; -*-
+{
+    // --- GENERAL ---
+    "layer": "top",
+    "position": "top",
+    // --- LEFT MODULES ---
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "hyprland/workspaces": {
+        "sort-by-name": true,
+        "format": "{id}",
+        "show-special": true,
+        "persistent_workspaces": {
+            "*": 3
+        }
+    },
+    // --- CENTER MODULES ---
+    "modules-center": [
+        "custom/nowplaying",
+        "custom/cava",
+        "clock"
+    ],
+    "custom/nowplaying": {
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/now_playing.py",
+        "format": "{:>20}  ",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "max_length": 50,
+        "escape": true
+    },
+    "clock": {
+        "interval": 1,
+        "format": " {:%H:%M:%S %d %b}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava.sh"
+    },
+    // --- RIGHT MODULES ---
+    "modules-right": [
+        "network",
+        "idle_inhibitor",
+        "pulseaudio",
+        "bluetooth",
+        "cpu",
+        "memory",
+        "temperature",
+        "backlight",
+        "battery",
+        "custom/updates",
+        "custom/dunst",
+        "tray",
+        "custom/lock",
+        "custom/power"
+    ],
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr}\n{essid} on {frequency}GHz",
+        "format-ethernet": "{ipaddr} ",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "nm-connection-editor"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "pulseaudio": { // TODO: replace with wireplumber
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": " {status}",
+        "format-connected": " {num_connections}",
+        "tooltip-format": "{device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "on-click": "blueman-manager",
+        "on-click-right": "~/.config/waybar/scripts/bluetooth.sh"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "{usage:3}% ",
+        "on-click": "kitty btop"
+    },
+    "memory": {
+        "interval": 10,
+        "format": "{}% ",
+        "on-click": "kitty btop"
+    },
+    "temperature": {
+        "interval": 30,
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C ",
+        "on-click": "kitty btop"
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "battery": {
+        "interval": 60,
+        "full-at": 95,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% ",
+        "format-icons": [
+            "󱃍",
+            "󱃍",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰁹"
+        ],
+        "tooltip-format": "{capacity}%\n{timeTo}\n{power} W"
+    },
+    "custom/updates": {
+        "interval": 3600, // every hour
+        "exec": "~/.config/waybar/scripts/get_updates.sh",
+        "return-type": "json",
+        "exec-if": "exit 0",
+        "exec-on-event": false,
+        "on-click": "kitty sh -c ~/.config/waybar/scripts/update.sh",
+        "signal": 8,
+    },
+    "custom/dunst": {
+        "exec": "~/.config/waybar/scripts/dunst.sh",
+        "return-type": "json",
+        "on-click": "dunstctl set-paused toggle",
+    },
+    // ---
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+    // ---
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "swaylock -C ~/.config/swaylock/config",
+        "format": "",
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout",
+        "format": "⏻"
+    }
+}
