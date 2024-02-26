@@ -1,6 +1,6 @@
 /*
 Walbert default theme, created using styling from a couple of different existing themes.
-move this file to /usr/share/albert/widgetsboxmodel/themes/ in order to load this theme
+move this file to /usr/share/albert/widgetsboxmodel/themes/ in order to load this theme@
 alternative color: 010305;
 */
 * {
