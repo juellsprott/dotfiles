@@ -2,7 +2,9 @@
 
 My dotfiles (program configuration files) are stored in a Git bare repository.
 
-![image](https://github.com/GGORG0/dotfiles/assets/51029895/af22ec16-1d5e-43a8-b0d6-16021817da90)
+![image](https://github.com/juellsprott/dotfiles/blob/master/.config/examples/example1.png)
+![image](https://github.com/juellsprott/dotfiles/blob/master/.config/examples/example3.png)
+![image](https://github.com/juellsprott/dotfiles/blob/master/.config/examples/example2.png)
 
 ## Contents
 This repository contains configuration files for the following packages
