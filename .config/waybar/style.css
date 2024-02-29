@@ -3,8 +3,7 @@
 /* --- GENERAL --- */
 * {
   font-family: Monaspace Krypton, Bold;
-  font-size: 12px;
-  margin-top: 3px;
+  font-size: 13px;
   min-height: 0;
 }
 
@@ -41,7 +40,7 @@ window#waybar {
 #custom-power {
   background-color: @mantle;
   padding: 0.5rem 0.75rem;
-  margin: 5px 0;
+  margin: 15px 0;
 }
 
 /* --- LEFT MODULES --- */
@@ -49,7 +48,7 @@ window#waybar {
 #workspaces {
   border-radius: 1rem 0px 0px 1rem;
 
-  margin: 5px 0 5px 5px;
+  margin: 15px 0 15px 10px;
   padding-left: 0.3rem;
   background-color: @mantle;
 }
@@ -147,6 +146,8 @@ window#waybar {
 
 #battery {
   color: @green;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 0.75rem;
 }
 
 #battery.charging {
@@ -197,7 +198,7 @@ window#waybar {
 }
 
 #custom-power {
-  margin: 5px 5px 5px 0;
+  margin: 15px 15px 15px 0px;
   border-radius: 0px 1rem 1rem 0px;
   color: @red;
 }

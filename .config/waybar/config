@@ -55,18 +55,18 @@
         "exec": "~/.config/waybar/scripts/cava.sh"
     },
     // --- RIGHT MODULES ---
+    //"custom/dunst",
+    // "cpu",
+    // "backlight",
+    // "temperature",
+    // "idle_inhibitor",
     "modules-right": [
         "network",
-        "idle_inhibitor",
         "pulseaudio",
         "bluetooth",
-        "cpu",
         "memory",
-        "temperature",
-        "backlight",
-        "battery",
         "custom/updates",
-        "custom/dunst",
+        "battery",
         "tray",
         "custom/lock",
         "custom/power"
