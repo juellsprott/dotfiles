@@ -76,7 +76,6 @@ ZSH_THEME="jovial"
 # Add wisely, as too many plugins slow down  shell startup.
 plugins=(
   git
-  autojump
   urltools
   bgnotify
   zsh-autosuggestions
@@ -115,12 +114,21 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-eval "$(op completion zsh)"; compdef _op op
-echo 'export PATH=$HOME/.pyenv/bin:$PATH' >> ~/.zshenv
 
+# 1password autocompletion
+eval "$(op completion zsh)"; compdef _op op
+
+# nvm export
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# zoxide and completions
+eval "$(zoxide init --cmd cd zsh)"
+
+# export rye environment
 source "$HOME/.rye/env"
 
 # hide howdy opencv errors
+export OPENCV_LOG_LEVEL=OFF
+export OPENCV_VIDEOIO_PRIORITY_INTEL_MFX=0

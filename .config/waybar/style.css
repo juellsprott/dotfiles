@@ -40,15 +40,17 @@ window#waybar {
 #custom-power {
   background-color: @mantle;
   padding: 0.5rem 0.75rem;
-  margin: 15px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* --- LEFT MODULES --- */
 
 #workspaces {
   border-radius: 1rem 0px 0px 1rem;
-
-  margin: 15px 0 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
   padding-left: 0.3rem;
   background-color: @mantle;
 }
@@ -198,7 +200,7 @@ window#waybar {
 }
 
 #custom-power {
-  margin: 15px 15px 15px 0px;
   border-radius: 0px 1rem 1rem 0px;
   color: @red;
+  margin-right: 5px;
 }

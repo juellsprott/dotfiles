@@ -16,6 +16,9 @@
             "*": 3
         }
     },
+    "hyprland/window": {
+        "format": "{class}"
+    },
     // --- CENTER MODULES ---
     "modules-center": [
         "custom/nowplaying",
@@ -180,12 +183,12 @@
         "exec-if": "exit 0",
         "exec-on-event": false,
         "on-click": "kitty sh -c ~/.config/waybar/scripts/update.sh",
-        "signal": 8,
+        "signal": 8
     },
     "custom/dunst": {
         "exec": "~/.config/waybar/scripts/dunst.sh",
         "return-type": "json",
-        "on-click": "dunstctl set-paused toggle",
+        "on-click": "dunstctl set-paused toggle"
     },
     // ---
     "tray": {
@@ -196,7 +199,7 @@
     "custom/lock": {
         "tooltip": false,
         "on-click": "swaylock -C ~/.config/swaylock/config",
-        "format": "",
+        "format": ""
     },
     "custom/power": {
         "tooltip": false,
