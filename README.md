@@ -2,9 +2,9 @@
 
 The dotfiles (program configuration files) used in my Hyprland rice. These files are stored in a Git bare repository.
 
-![image](https://github.com/juellsprott/dotfiles/blob/master/.config/examples/example1.png)
-![image](https://github.com/juellsprott/dotfiles/blob/master/.config/examples/example3.png)
-![image](https://github.com/juellsprott/dotfiles/blob/master/.config/examples/example2.png)
+![image](https://github.com/juellsprott/dotfiles/blob/master/config/.config/examples/example1.png)
+![image](https://github.com/juellsprott/dotfiles/blob/master/config/.config/examples/example3.png)
+![image](https://github.com/juellsprott/dotfiles/blob/master/config/.config/examples/example2.png)
 
 ## Contents
 This repository contains configuration files for the following packages
