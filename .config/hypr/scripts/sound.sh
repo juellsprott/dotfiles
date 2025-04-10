@@ -47,12 +47,12 @@ raise_volume () {
     else
         pactl set-sink-volume 0 +$1%
     fi
-    show_notification
+    # show_notification
 }
 
 lower_volume () {
     pactl set-sink-volume 0 -$1%
-    show_notification
+    # show_notification
 }
 
 toggle_mute_volume () {

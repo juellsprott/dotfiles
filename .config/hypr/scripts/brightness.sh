@@ -27,12 +27,12 @@ get_brightness_icon () {
 
 raise_brightness () {
     brightnessctl -d intel_backlight set +$1
-    show_notification
+    # show_notification
 }
 
 lower_brightness () {
     brightnessctl -d intel_backlight set $1-
-    show_notification
+   # show_notification
 }
 
 show_notification () {

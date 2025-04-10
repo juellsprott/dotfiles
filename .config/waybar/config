@@ -3,10 +3,10 @@
     // --- GENERAL ---
     "layer": "top",
     "position": "top",
+    "margin": "0 0 0 0",
     // --- LEFT MODULES ---
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/workspaces"
     ],
     "hyprland/workspaces": {
         "sort-by-name": true,
@@ -64,10 +64,9 @@
     // "temperature",
     // "idle_inhibitor",
     "modules-right": [
-        "network",
         "pulseaudio",
         "bluetooth",
-        "memory",
+        "cpu",
         "custom/updates",
         "battery",
         "tray",
@@ -119,6 +118,7 @@
         "tooltip-format": "{device_alias}",
         "format-connected-battery": " {device_alias} {device_battery_percentage}%",
         "tooltip-format-enumerate-connected": "{device_alias}",
+        "format-no-controller": "",
         "on-click": "blueman-manager",
         "on-click-right": "~/.config/waybar/scripts/bluetooth.sh"
     },

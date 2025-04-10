@@ -1,0 +1,12 @@
+{
+    "c6a9700d-900d-4720-99ed-46b590721ce8": {
+        "id": "c6a9700d-900d-4720-99ed-46b590721ce8",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1709032159.691966
+    }
+}
